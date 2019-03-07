@@ -1,0 +1,17 @@
+/* Content */
+
+.content
+  .content-box
+    - @objects.each do |object|
+      .content-item
+        - if object.text == true
+          .trix
+            = safe_join([object.text_box.html_safe])
+        - if object.image == true
+          .trix
+            .image
+              = image_tag object.image_box_url.to_s, class: "left"
+        - if object.video == true
+          .trix
+            .video
+              %iframe#ytplayer{ allowfullscreen: "", frameborder: "0", height: "531", src: "https://www.youtube.com/embed/#{object.video_box}", type: "text/html", width: "944" }

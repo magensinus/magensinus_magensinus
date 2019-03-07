@@ -1,0 +1,17 @@
+/* Responsive navigation */
+
+.universal
+  .responsive-navigation.altai-toggle
+    %nav.responsive-navigation-box
+      %ul.responsive-navigation-column
+        - fetch_responsive_left_urls.each do |object|
+          %li.responsive-navigation-item
+            = link_to object[:title], object[:url], class: "link gray hover-underline #{active_class(controller: object[:controller])}"
+      %ul.responsive-navigation-column
+        - fetch_responsive_middle_urls.each do |object|
+          %li.responsive-navigation-item
+            = link_to object[:title], object[:url], class: "link gray hover-underline #{active_class(controller: object[:controller])}"
+      %ul.responsive-navigation-column
+        - fetch_responsive_right_urls.each do |object|
+          %li.responsive-navigation-item
+            = link_to object[:title], object[:url], class: "link gray hover-underline #{active_class(controller: object[:controller])}"

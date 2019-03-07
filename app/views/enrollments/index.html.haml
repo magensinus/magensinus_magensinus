@@ -1,0 +1,14 @@
+// Index
+
+
+
+.container-top.left
+  = render partial: "breadcrumbs"
+.container-middle.left
+  = render partial: "enrollments", locals: { object: @academy_category }
+  - unless flash[:success]
+    - if @academy_category.form_type == "basic"
+      = render "form_basic", parent: @academy_category, object: @academy_enrollment, courses: @academy_courses, settings: @settings
+    - if @academy_category.form_type == "extended"
+      = render "form_extended", parent: @academy_category, object: @academy_enrollment, courses: @academy_courses, settings: @settings
+.container-bottom.left

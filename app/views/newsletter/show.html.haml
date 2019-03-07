@@ -1,0 +1,19 @@
+/* Index */
+
+.container-top.left
+  .breadcrumbs
+    .breadcrumbs-box
+      .breadcrumbs-item
+        = link_to root_path, class: "link small" do
+          .icon.left
+            = image_tag "icons/back.png"
+          = t("home")
+
+.container-middle.left
+
+  = render partial: "newsletter", locals: { object: @object }
+
+  - unless flash[:success]
+    = render partial: "form"
+
+.container-bottom.left

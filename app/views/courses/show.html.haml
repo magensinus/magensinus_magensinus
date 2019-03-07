@@ -1,0 +1,10 @@
+/* show */
+
+.container-top.left
+  = render partial: "breadcrumbs"
+.container-middle.left
+  = render partial: "content", locals: { object: @course }
+  - if @sections.presence
+    = render partial: "section_content"
+.container-bottom.left
+= render "theme", object: @course

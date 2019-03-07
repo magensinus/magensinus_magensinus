@@ -1,0 +1,7 @@
+/* Secondary navigation */
+
+%nav.secondary-navigation
+  %ul.secondary-navigation-box
+    - fetch_secondary_urls.each do |object|
+      %li.secondary-navigation-item
+        = link_to object[:title], object[:url], class: "white #{active_class(controller: object[:controller])}"

@@ -1,0 +1,13 @@
+/* Section content */
+
+.section-content
+  .section-content-box
+    .section-content-item
+      .section-content-left
+        .section-content-inner#ajax-content
+          %h3= @section.title
+          - @assets.each do |asset|
+            .trix
+              = safe_join([asset.text_box.html_safe])
+      .section-content-right
+        = render partial: "section_navigation", locals: { course: @course, sections: @sections }

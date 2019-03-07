@@ -1,0 +1,10 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Billboard
+// Project: Mies by IIGETHR
+// -------------------------------------------------------------
+
+$class: "billboard";
+
+.#{$class} {
+  background-color: $blue-500;
+}
