@@ -3,7 +3,7 @@
 class AboutAsset < ApplicationRecord
   # Table name
   # ----------
-  # Magestil about_asset
+  # about_asset
   self.table_name = "magensinus_about_assets"
 
   # Concerns
