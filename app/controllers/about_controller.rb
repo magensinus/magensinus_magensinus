@@ -18,6 +18,6 @@ class AboutController < ApplicationController
 
   # Objects
   def objects
-    @objects = AboutAsset.all
+    @objects = AboutAsset.order(position: :asc)
   end
 end
