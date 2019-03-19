@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root to: "offline#index"
+  root to: "home#index"
   resources :offline, only: [:index], controller: :offline
   resources :home, only: [:index], controller: :home
   resources :about, only: [:index], controller: :about

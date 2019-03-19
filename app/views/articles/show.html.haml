@@ -34,7 +34,7 @@
         - if asset.video == true
           .content-item
             .media
-              %iframe#ytplayer{ allowfullscreen: "", frameborder: "0", height: "369", src: "https://www.youtube.com/embed/#{video_box_url}", type: "text/html", width: "656" }
+              %iframe#ytplayer{ allowfullscreen: "", frameborder: "0", height: "369", src: "https://www.youtube.com/embed/#{asset.video_box}", type: "text/html", width: "656" }
   .content.col-large-4-1
     .content-box
       .content-item
@@ -46,5 +46,5 @@
                 = link_to article_path(item), class: "link small blue" do
                   .icon.left
                     = image_tag "icons/underscore.png"
-                  = item.title
+                  = (item.title).truncate(48)
 .container-bottom.left
