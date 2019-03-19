@@ -2,12 +2,14 @@
 
 .content
   .content-box
-    .content-item
-      - if object.title.presence
+    - if object.title.presence
+      .content-item
         %h1= object.try(:title)
-      - if object.description.presence
+    - if object.description.presence
+      .content-item
         .trix
           = safe_join([object.try(:description).html_safe])
+
     - if object.body.presence
       .content-item
         .trix

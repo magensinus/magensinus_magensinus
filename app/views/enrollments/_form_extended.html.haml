@@ -12,7 +12,7 @@
         .field.col-large-2-1
           .checkbox
             = tag.check_box
-            = tag.label
+            = truncate(tag.label, length: 7)
   .separator.extra-small
   %fieldset
     %legend
