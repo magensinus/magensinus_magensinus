@@ -36,6 +36,6 @@ class CoursesController < ApplicationController
 
   # Categories
   def categories
-    @categories ||= Academy::Category.where(magensinus: true, published: true)
+    @categories ||= Academy::Category.where(magensinus: true, published: true).order(position: :asc)
   end
 end
