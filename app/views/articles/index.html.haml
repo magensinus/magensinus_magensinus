@@ -20,7 +20,7 @@
           .articles-inner
             = image_tag journal_article.thumb_box_url
           .separator.extra-small
-          = link_to article_path(journal_article), class: "blue" do
+          = link_to article_path(journal_article), class: "link gray" do
             .icon.left
               = image_tag "icons/underscore.png"
             = (journal_article.title).truncate(24)

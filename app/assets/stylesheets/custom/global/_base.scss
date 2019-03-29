@@ -4,13 +4,31 @@
 // -------------------------------------------------------------
 
 html {
-  background-color: $blue-500;
+  background-color: $gray-800;
   color: $black;
 }
 
 body {
   background-color: $gray-000;
   color: $black;
+}
+
+.map-box {
+  background-color: $white;
+  float: left;
+  padding: 16px;
+  width: 100%;
+  #map {
+    background-color: $white;
+    float: left;
+    height: 320px;
+    width: 100%;
+    iframe {
+      float: left;
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 // Media Query 240px

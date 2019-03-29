@@ -43,7 +43,7 @@
           .articles-sidebar-box
             - recent_journal_articles.each do |item|
               .articles-sidebar-item
-                = link_to article_path(item), class: "link small blue" do
+                = link_to article_path(item), class: "link small gray" do
                   .icon.left
                     = image_tag "icons/underscore.png"
                   = (item.title).truncate(48)
