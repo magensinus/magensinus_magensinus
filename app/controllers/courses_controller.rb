@@ -10,6 +10,14 @@ class CoursesController < ApplicationController
   def index
     @courses = []
     @categories.each do |category|
+      @courses =  category.courses.order(position: :asc) do |course|
+                    course if course
+                  end
+    end
+
+
+    @courses = []
+    @categories.each do |category|
       get_courses = Academy::Course.where(academy_category_id: category.id).order(position: :asc)
       @courses = get_courses
     end
