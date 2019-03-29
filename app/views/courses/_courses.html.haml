@@ -11,6 +11,6 @@
         .courses-item
           = safe_join([object.try(:description).html_safe])
       - if object.courses.presence
-        - @courses.each do |course|
+        - object.courses.each do |course|
           = render "course_thumb", course: course
         .separator.medium
