@@ -11,5 +11,5 @@
         .courses-item
           = safe_join([object.try(:description).html_safe])
       - object.courses.each do |course|
-        = render "course_thumb", course: course if course.magensinus = true
+        = render "course_thumb", course: course if (course.published == true && course.magensinus = true)
       .separator.medium
