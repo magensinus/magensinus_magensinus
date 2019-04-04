@@ -10,12 +10,10 @@ $class: "brand-footer";
     .#{$class}-item {
       a {
         float: left;
-        line-height: 32px;
-        width: 224px;
+        height: 48px;
         img {
           float: left;
-          line-height: 32px;
-          width: 224px;
+          height: 48px;
         }
       }
     }

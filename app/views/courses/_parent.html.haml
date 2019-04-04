@@ -5,13 +5,9 @@
     - if parent.title.presence
       .content-item
         %h1= parent.try(:title)
-
     - if parent.description.presence
       .content-item
         .trix
           = safe_join([parent.try(:description).html_safe])
-
-    - if parent.body.presence
-      .content-item
-        .trix
-          = safe_join([parent.try(:body).html_safe])
+    - if parent.title.presence
+      .separator.medium

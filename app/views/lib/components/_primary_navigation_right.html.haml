@@ -3,4 +3,7 @@
 .primary-navigation
   .primary-navigation-box.left
     .primary-navigation-item
-      = link_to "cursos", courses_path, class: "link gray hover-underline"
+      = link_to courses_path, class: "link" do
+        // .icon.left
+        //   = image_tag "icons/courses.png"
+        cursos

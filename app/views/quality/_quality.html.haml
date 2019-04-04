@@ -9,7 +9,6 @@
       .content-item
         .trix
           = safe_join([object.try(:description).html_safe])
-
     - if object.body.presence
       .content-item
         .trix

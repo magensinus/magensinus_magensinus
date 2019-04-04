@@ -8,19 +8,6 @@ class CoursesController < ApplicationController
 
   # /courses
   def index
-    @courses = []
-    @categories.each do |category|
-      @courses =  category.courses.order(position: :asc) do |course|
-                    course if course
-                  end
-    end
-
-
-    @courses = []
-    @categories.each do |category|
-      get_courses = Academy::Course.where(academy_category_id: category.id).order(position: :asc)
-      @courses = get_courses
-    end
   end
 
   # /courses/slug
@@ -28,7 +15,7 @@ class CoursesController < ApplicationController
     get_sections = @course.sections
     @sections = get_sections.all
     @section = get_sections.first! if get_sections.presence
-    @assets = @section.section_assets.all if @section.presence
+    @assets = @section.section_assets.order(position: :asc) if @section.presence
     respond_to do |format|
       format.html
       format.js

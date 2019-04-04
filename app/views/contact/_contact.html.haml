@@ -14,7 +14,6 @@
       .content-item.col-large-2-1
         .trix
           = safe_join([object.try(:body).html_safe])
-
     .content-item.col-large-2-1
       - if object.address_one.presence
         %p.mg-0= object.try(:address_one)

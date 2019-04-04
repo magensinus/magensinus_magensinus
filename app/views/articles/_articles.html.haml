@@ -5,12 +5,7 @@
     - if object.title.presence
       .content-item
         %h1= object.try(:title)
-      - if object.description.presence
-        .separator.small
+    - if object.description.presence
+      .content-item
         .trix
           = safe_join([object.try(:description).html_safe])
-      - if object.body.presence
-        .separator.small
-        .content-item
-          .trix
-            = safe_join([object.try(:body).html_safe])
