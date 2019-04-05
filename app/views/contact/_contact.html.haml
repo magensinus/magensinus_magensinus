@@ -32,3 +32,5 @@
         %p.mg-0= object.try(:phone)
       - if object.email.presence
         %p.mg-0= object.try(:email)
+  .content-box.col-large-2-1
+    = render "map", object: @object
