@@ -3,7 +3,7 @@
 - if @object.image_box.presence
   .billboard{ style: "background-image: url(#{image_path @object.image_box_url.to_s})" }
     .billboard-box
-      .billboard-item
+      .billboard-item.right
         .separator.medium
         %h1.white-cl.large= @object.title
         - if @object.description.presence
@@ -13,7 +13,7 @@
 - else
   .billboard
     .billboard-box
-      .billboard-item
+      .billboard-item.right
         .separator.medium
         %h1.white-cl.large= @object.title
         - if @object.description.presence
